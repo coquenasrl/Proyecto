@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Ej5-Grupo10-ComsD</title>
+  <link rel="stylesheet" href="css/estilogeneral.css">
+</head>
+<body>
+  <aside>
+    <header>
+        <h1><a href="index.html">Proyecto del Grupo 10</a></h1>
+    </header>
+    <nav>
+        <a href="ej1.html"><h2>Ej1</h2></a>
+        <a href="ej2.html"><h2>Ej2</h2></a>
+        <a href="ej3.html"><h2>Ej3</h2></a>
+        <a href="ej4.html"><h2>Ej4</h2></a>
+        <a href="ej5.html"><h2>Ej5</h2></a>
+        <a href="ej6.html"><h2>Ej6</h2></a>
+    </nav>
+</aside>
+  <h3>Resultados:</h3>
+  <p id="resultadoA"></p>
+  <p id="resultadoB"></p>
+
+  <script>
+    var grupoTP = ['Juan Perez', 8, 'Samuel Lopez', 7.80, 'Maria Gonzalez', 5.34, 'Analía Tolaba', 3.25];
+
+    var sumatoriaNotas = 0;
+    var cantidadNotas = 0;
+
+    for (var i = 1; i < grupoTP.length; i += 2) {
+      if (typeof grupoTP[i] === 'number') {
+        sumatoriaNotas += grupoTP[i];
+        cantidadNotas++;
+      }
+    }
+
+    var promedioNotas = sumatoriaNotas / cantidadNotas;
+    document.getElementById("resultadoA").textContent = "El promedio de las notas es: " + promedioNotas;
+
+    var notaMasAlta = -Infinity;
+    var notaMasBaja = Infinity;
+
+    for (var i = 1; i < grupoTP.length; i += 2) {
+      if (typeof grupoTP[i] === 'number') {
+        if (grupoTP[i] > notaMasAlta) {
+          notaMasAlta = grupoTP[i];
+        }
+        if (grupoTP[i] < notaMasBaja) {
+          notaMasBaja = grupoTP[i];
+        }
+      }
+    }
+
+    document.getElementById("resultadoB").textContent = "La nota más alta es: " + notaMasAlta + ", y la nota más baja es: " + notaMasBaja;
+  </script>
+</body>
+</html>

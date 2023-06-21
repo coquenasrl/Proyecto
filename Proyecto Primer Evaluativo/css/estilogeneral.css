@@ -1,0 +1,61 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+h1{
+    font-weight: 500;
+    font-size: 4rem; 
+    padding: 0;
+    padding-left: 22rem;
+    background-color: black;
+}
+
+h2 {
+    display: inline-block;
+    color: white;
+    font-size: 2rem;
+    padding: 4rem;
+}
+
+h3{
+    padding: 1rem;
+    padding-left: 20rem;
+    font-size: 2rem;
+    display: inline-block;
+    color: gold;
+}
+
+p{
+    color: orangered;
+    font-weight: 500;
+    font-size: 2rem;
+    padding: 1rem;
+    padding-left: 30rem;
+}
+
+label{
+    color: chocolate;
+    
+}
+
+button{
+    border: o;
+    background-color: red;
+    color: white;
+    padding: .5rem;
+    text-transform: uppercase;
+    border-radius: 2rem;
+    border: 2px solid red;
+    transition: background-color 2s, color .2s;
+    cursor: pointer;
+}
+
+a {
+    cursor: pointer;
+    color: red;
+    text-decoration: none;
+}
+
+nav {
+    background-color:grey;
+}

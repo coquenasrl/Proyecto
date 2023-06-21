@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Ej4-Grupo10-ComsD</title>
+  <link rel="stylesheet" href="css/estilogeneral.css">
+</head>
+<body>
+  <aside>
+    <header>
+        <h1><a href="index.html">Proyecto del Grupo 10</a></h1>
+    </header>
+    <nav>
+        <a href="ej1.html"><h2>Ej1</h2></a>
+        <a href="ej2.html"><h2>Ej2</h2></a>
+        <a href="ej3.html"><h2>Ej3</h2></a>
+        <a href="ej4.html"><h2>Ej4</h2></a>
+        <a href="ej5.html"><h2>Ej5</h2></a>
+        <a href="ej6.html"><h2>Ej6</h2></a>
+    </nav>
+</aside>
+  <h3>Resultados:</h3>
+  <p id="resultadoA"></p>
+  <p id="resultadoB"></p>
+
+  <script>
+    var tempEnero = [30, 32, 29, 31, 33, 28, 27, 30, 32, 35, 34, 30, 28, 31, 33, 32, 29, 27, 28, 31, 33, 34, 32, 29, 30, 28, 26, 31, 30];
+
+    var promedioMensual = tempEnero.reduce(function(a, b) { return a + b; }) / tempEnero.length;
+
+    var primerDiaPromedioIgual = null;
+
+    for (var i = 0; i < tempEnero.length; i++) {
+      var sumatoriaDia = tempEnero[i];
+      var promedioDia = sumatoriaDia / tempEnero.length;
+
+      if (promedioDia === promedioMensual) {
+        primerDiaPromedioIgual = i + 1; // Sumamos 1 para mostrar el día real, ya que los índices comienzan en 0
+        break; // Salimos del bucle al encontrar el primer día
+      }
+    }
+
+    if (primerDiaPromedioIgual !== null) {
+      document.getElementById("resultadoA").textContent = "El primer día en el que el promedio fue igual al promedio mensual fue el día " + primerDiaPromedioIgual;
+    } else {
+      document.getElementById("resultadoA").textContent = "No se encontró un día con promedio igual al promedio mensual";
+    }
+
+    var diasPromedioIgual = [];
+
+    for (var i = 0; i < tempEnero.length; i++) {
+      var sumatoriaDia = tempEnero[i];
+      var promedioDia = sumatoriaDia / tempEnero.length;
+
+      if (promedioDia === promedioMensual) {
+        diasPromedioIgual.push(i + 1); // Sumamos 1 para mostrar el día real, ya que los índices comienzan en 0
+      }
+    }
+
+    if (diasPromedioIgual.length > 0) {
+      document.getElementById("resultadoB").textContent = "Los días en los que el promedio fue igual al promedio mensual son: " + diasPromedioIgual;
+    } else {
+      document.getElementById("resultadoB").textContent = "No se encontraron días con promedio igual al promedio mensual";
+    }
+  </script>
+</body>
+</html>

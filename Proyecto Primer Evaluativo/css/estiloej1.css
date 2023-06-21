@@ -1,0 +1,42 @@
+*{
+    margin: 0;
+}
+
+h1{
+    color: blue;
+    font-weight: 500;
+    font-size: 4rem;
+    padding: 1rem;
+    padding-left: 22rem;
+    text-emphasis: none;
+    background-color: darkgray;
+}
+
+h2 {
+    color: blueviolet;
+    display:inline-block;
+    padding: 0;
+    padding-left: 25rem;
+    font-size: 2rem;
+    margin: 1rem;
+}
+
+h3{
+    color: gold;
+    background-color: red;
+    font-size: 3rem;
+    padding: 1rem;
+    padding-left: 32rem;
+}
+
+p{
+    color: red;
+    font-weight: 500;
+    font-size: 1rem; 
+    padding: 1rem;
+    padding-right: 0;
+}
+
+a{
+    text-decoration: none;
+}

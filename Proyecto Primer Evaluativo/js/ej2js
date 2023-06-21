@@ -1,0 +1,9 @@
+var palabras = ['Hola', 'somos','el','grupo','10','Coquena'];
+
+var resultado = [];
+for (var i = 0; i < palabras.length; i++) {
+  resultado.push(palabras[i]);
+}
+var textoConcatenado = resultado.join(' ');
+
+console.log(textoConcatenado); 

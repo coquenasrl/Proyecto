@@ -1,0 +1,38 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Ej2</title>
+  <link rel="stylesheet" href="css/estilogeneral.css">
+</head>
+<body>
+  <aside>
+    <header>
+        <h1><a href="index.html">Proyecto del Grupo 10</a></h1>
+    </header>
+    <nav>
+        <a href="ej1.html"><h2>Ej1</h2></a>
+        <a href="ej2.html"><h2>Ej2</h2></a>
+        <a href="ej3.html"><h2>Ej3</h2></a>
+        <a href="ej4.html"><h2>Ej4</h2></a>
+        <a href="ej5.html"><h2>Ej5</h2></a>
+        <a href="ej6.html"><h2>Ej6</h2></a>
+    </nav>
+</aside>
+  <h3>Concatenación de palabras</h3>
+  <p id="resultado"></p>
+
+  <script>
+    var palabras = ['Hola','somos','el','grupo','10','Coquena'];
+
+    var resultado = [];
+    for (var i = 0; i < palabras.length; i++) {
+     resultado.push(palabras[i]);
+    }
+    var textoConcatenado = resultado.join(' ');
+
+    document.getElementById("resultado").textContent = textoConcatenado;
+
+  </script>
+</body>
+</html>

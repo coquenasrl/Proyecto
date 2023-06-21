@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Ej3</title>
+  <link rel="stylesheet" href="css/estilogeneral.css">
+</head>
+<body>
+  <aside>
+    <header>
+        <h1><a href="index.html">Proyecto del Grupo 10</a></h1>
+    </header>
+    <nav>
+        <a href="ej1.html"><h2>Ej1</h2></a></h2>
+        <a href="ej2.html"><h2>Ej2</h2></a>
+        <a href="ej3.html"><h2>Ej3</h2></a>
+        <a href="ej4.html"><h2>Ej4</h2></a>
+        <a href="ej5.html"><h2>Ej5</h2></a>
+        <a href="ej6.html"><h2>Ej6</h2></a>
+    </nav>
+</aside>
+  <h3>Determinar tipo de día</h3>
+  <label for="numeroDia">Ingrese el número del día de la semana:</label>
+  <input type="number" id="numeroDia" min="1" max="7">
+  <button onclick="determinarTipoDia()">Determinar</button>
+  <p id="resultado"></p>
+  <script>
+    function determinarTipoDia() {
+        var numeroDia = document.getElementById("numeroDia").value;
+
+        if (numeroDia == 1 || numeroDia == 7) {
+            document.getElementById("resultado").textContent = "Es fin de semana";
+        } else {
+            document.getElementById("resultado").textContent = "Es día de clases";
+        }
+    }
+
+  </script>
+</body>
+</html>

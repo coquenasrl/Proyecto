@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Ej6-Grupo10-ComsD</title>
+  <link rel="stylesheet" href="css/estilogeneral.css">
+</head>
+<body>
+  <aside>
+    <header>
+        <h1><a href="index.html">Proyecto del Grupo 10</a></h1>
+    </header>
+    <nav>
+        <a href="ej1.html"><h2>Ej1</h2></a>
+        <a href="ej2.html"><h2>Ej2</h2></a>
+        <a href="ej3.html"><h2>Ej3</h2></a>
+        <a href="ej4.html"><h2>Ej4</h2></a>
+        <a href="ej5.html"><h2>Ej5</h2></a>
+        <a href="ej6.html"><h2>Ej6</h2></a>
+    </nav>
+</aside>
+  <h3>Búsqueda de Código</h3>
+  <label for="codigo">Ingrese un código (0 para finalizar): </label>
+  <input type="number" id="codigoInput">
+  <button onclick="cargarCodigo()">Cargar</button>
+  <br>
+  <label for="codigoRequerido">Ingrese el código que desea buscar: </label>
+  <input type="number" id="codigoRequeridoInput">
+  <button onclick="buscarCodigo()">Buscar</button>
+  <br>
+  <p id="resultado"></p>
+
+  <script>
+    var listaCodigos = [];
+
+    function cargarCodigo() {
+      var codigo = parseInt(document.getElementById("codigoInput").value);
+
+      if (codigo === 0) {
+        return;
+      }
+
+      listaCodigos.push(codigo);
+      document.getElementById("codigoInput").value = "";
+    }
+
+    function buscarCodigo() {
+      var codigoRequerido = parseInt(document.getElementById("codigoRequeridoInput").value);
+
+      var posicion = listaCodigos.indexOf(codigoRequerido);
+
+      if (posicion !== -1) {
+        document.getElementById("resultado").textContent = "El código " + codigoRequerido + " se encuentra en la posición " + posicion;
+      } else {
+        document.getElementById("resultado").textContent = "Código no cargado";
+      }
+    }
+  </script>
+</body>
+</html>

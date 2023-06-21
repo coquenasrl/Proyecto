@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Ej1-Grupo10-ComsD</title>
+  <link rel="stylesheet" href="css/estiloej1.css">
+</head>
+<body>
+  <aside>
+    <header>
+        <h1><a href="index.html">Proyecto del Grupo 10</a></h1>
+    </header>
+      <nav>
+        <h2><a href="ej1.html">Ej1</a></h2>
+        <h2><a href="ej2.html">Ej2</a></h2>
+        <h2><a href="ej3.html">Ej3</a></h2>
+        <h2><a href="ej4.html">Ej4</a></h2>
+        <h2><a href="ej5.html">Ej5</a></h2>
+        <h2><a href="ej6.html">Ej6</a></h2>
+      </nav>
+    </aside>
+  <h3>Resultados:</h3>
+  <p id="resultadoA"></p>
+  <p id="resultadoB"></p>
+  <p id="resultadoC"></p>
+  <p id="resultadoD"></p>
+  <p id="resultadoE"></p>
+  <p id="resultadoF"></p>
+
+  <script>
+    
+    var tempEnero = [30, 32, 29, 31, 33, 28, 27, 30, 32, 35, 34, 30, 28, 31, 33, 32, 29, 27, 28, 31, 33, 34, 32, 29, 30, 28, 26, 31, 30];
+
+    var primerElemento = tempEnero[0];
+    document.getElementById("resultadoA").textContent = "Primer elemento: " + primerElemento;
+
+    var ultimoElemento = tempEnero[tempEnero.length - 1];
+    document.getElementById("resultadoB").textContent = "Último elemento: " + ultimoElemento;
+
+    var longitudArreglo = tempEnero.length;
+    document.getElementById("resultadoC").textContent = "Longitud del arreglo: " + longitudArreglo;
+
+    var promedioMensual = tempEnero.reduce(function(a, b) { return a + b; }) / tempEnero.length;
+    var diasCalidos = tempEnero.filter(function(temp) { return temp > promedioMensual; });
+    document.getElementById("resultadoD").textContent = "Días cálidos: " + diasCalidos;
+
+    tempEnero.push(promedioMensual);
+    document.getElementById("resultadoE").textContent = "Arreglo tempEnero con promedio al final: " + tempEnero;
+
+    diasCalidos.unshift(promedioMensual);
+    document.getElementById("resultadoF").textContent = "Arreglo diasCalidos con promedio al principio: " + diasCalidos;
+  </script>
+</body>
+</html>
